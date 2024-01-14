@@ -1,9 +1,16 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:gamesync/features/authentication/presentation/sign_in/sign_in_screen.dart';
-import 'package:go_router/go_router.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'firebase_options.dart';
+import 'src/routing/app_router.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -11,12 +18,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final goRouter = GoRouter(
-      routes: [
-        GoRoute(path: '/', builder: ((context, state) =>  Container()))
-      ],
-    );
     return MaterialApp.router(
+      theme: ThemeData(scaffoldBackgroundColor: const Color(0XFF303030)),
       routerConfig: goRouter,
     );
   }

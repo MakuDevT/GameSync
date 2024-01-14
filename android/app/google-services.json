@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "831227877247",
+    "project_id": "gamesync-9aa4c",
+    "storage_bucket": "gamesync-9aa4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831227877247:android:24f117f5dfa86e9effec4a",
+        "android_client_info": {
+          "package_name": "com.example.gamesync"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAydy8beGjlSaVPMnUlOHngFnIn5XWcjBw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
